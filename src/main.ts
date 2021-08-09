@@ -173,7 +173,7 @@ async function getLatestRunForWorkflow(
   const url = `actions/workflows/${forWorkflow.id}/runs`
 
   const temp = client.get<WorkflowRunsResponse>(url, {
-    params: {status: 'success', branch: branchName}
+    params: {/*status: 'success', */ branch: branchName}
   })
 
   const response = await temp
